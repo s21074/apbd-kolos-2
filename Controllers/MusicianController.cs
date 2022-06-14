@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace kolos2.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class MusicianController : ControllerBase
     {
         private readonly IMusicianService _service;
@@ -18,7 +20,7 @@ namespace kolos2.Controllers
             _service = service;
         }
 
-        [HttpGet("{musicianId")]
+        [HttpGet("{musicianId}")]
         public async Task<IActionResult> Get(int musicianId)
         {
             return Ok(

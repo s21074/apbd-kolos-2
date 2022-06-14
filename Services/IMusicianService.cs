@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace kolos2.Services
 {
-    interface IMusicianService
+    public interface IMusicianService
     {
         public IQueryable<Musician> GetMusicianById(int id);
     }
